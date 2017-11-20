@@ -24,3 +24,16 @@ def full?(board)
   end
 end
 
+def draw?(baord)
+  won?(board) == nil && full?(board) == true
+end
+
+def over?(board)
+  draw?(board) == true || won?(board) != nil
+end
+ 
+def winner(board)
+  if won?(board) != nil
+    winner = board[won?(board)[0]]
+  end
+end
