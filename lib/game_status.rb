@@ -18,7 +18,7 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 
-def full?(board) 
+def full?(board)
   board.none? do |i|
     i == " " || i.nil?
   end
@@ -31,7 +31,7 @@ end
 def over?(board)
   draw?(board) == true || won?(board) != nil
 end
- 
+
 def winner(board)
   if won?(board) != nil
     winner = board[won?(board)[0]]
